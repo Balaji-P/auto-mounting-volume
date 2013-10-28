@@ -88,9 +88,8 @@ Adding a Script to Cron
 
 Installing Git-Annex
 -----------------
-#. Install Haskell Platform: ``$ sudo yum install haskell-platform``.
+#. Install dependencies via YUM: ``$ sudo yum install haskell-platform gnutls-devel libgsasl-devel libxml2-devel zlib-devel ghc-zlib-devel libidn-devel``.
 #. Update cabal: ``$ cabal update``.
-#. Install C libraries and their headers: ``$ sudo yum install gnutls-devel libgsasl-devel libxml2-devel zlib-devel ghc-zlib-devel libidn-devel``.
 #. Install c2hs: ``$ sudo cabal install c2hs --bindir=/usr/local/bin/``.
 #. Create symbolic link for ``c2hs`` within ``/usr/sbin`` so you can run it as sudo or root: ``$ sudo ln -s /usr/local/bin/c2hs /usr/sbin/``.
 #. Finally, install git-annex: ``$ sudo cabal install git-annex --bindir=/usr/local/bin/``.
