@@ -88,8 +88,12 @@ Adding a Script to Cron
 
 Installing Git-Annex
 -----------------
+
+**NOTE:** If you are using the steps below for your client computer with Fedora/CentOS/RHEL, it is recommended to replace the references to ``/usr/local/bin`` with ``$HOME/bin``. Note also that if you do this, you do not need to run the associated command with ``sudo``.
+
 #. Install dependencies via YUM: ``$ sudo yum install haskell-platform gnutls-devel libgsasl-devel libxml2-devel zlib-devel ghc-zlib-devel libidn-devel``.
 #. Update cabal: ``$ cabal update``.
+#. If needed, upgrade cabal: ``$ cabal install cabal-install``.
 #. Install c2hs: ``$ sudo cabal install c2hs --bindir=/usr/local/bin/``.
 #. Create symbolic link for ``c2hs`` within ``/usr/sbin`` so you can run it as sudo or root: ``$ sudo ln -s /usr/local/bin/c2hs /usr/sbin/``.
 #. Finally, install git-annex: ``$ sudo cabal install git-annex --bindir=/usr/local/bin/``.
