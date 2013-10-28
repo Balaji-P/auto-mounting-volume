@@ -89,7 +89,9 @@ Adding a Script to Cron
 Installing Git-Annex
 -----------------
 
-**NOTE:** If you are using the steps below for your client computer with Fedora/CentOS/RHEL, it is recommended to replace the references to ``/usr/local/bin`` with ``$HOME/bin``. Note also that if you do this, you do not need to run the associated command with ``sudo``.
+**NOTE 1:** If you are using the steps below for your client computer with Fedora/CentOS/RHEL, it is recommended to replace the references to ``/usr/local/bin`` with ``$HOME/bin``. Note also that if you do this, you do not need to run the associated command with ``sudo``.
+
+**NOTE 2:** If installing on a client computer with Fedora/CentOS/RHEL: skip step 5 and make sure ``$HOME/bin`` is in your PATH environment variable. If it isn't add ``export PATH=$PATH:$HOME/bin`` to ``~/.bashrc`` and run ``$ source ~/.bashrc``.
 
 #. Install dependencies via YUM: ``$ sudo yum install haskell-platform gnutls-devel libgsasl-devel libxml2-devel zlib-devel ghc-zlib-devel libidn-devel``.
 #. Update cabal: ``$ cabal update``.
